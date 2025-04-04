@@ -1,15 +1,19 @@
 version: "3.4"
 services:
   neko:
-    image: "m1k1o/neko:firefox"
-    restart: "unless-stopped"
+    image: "m1k1o/neko:google-chrome"
+    restart: "always"
     shm_size: "2gb"
     ports:
-      - "8080:8080"
+      - "8081:8080"
       - "52000-52100:52000-52100/udp"
+      - "9022:9022"
+    cap_add:
+      - SYS_ADMIN
     environment:
-      NEKO_SCREEN: 1920x1080@30
+      NEKO_SCREEN: 430x932@30
       NEKO_PASSWORD: neko
       NEKO_PASSWORD_ADMIN: admin
       NEKO_EPR: 52000-52100
       NEKO_ICELITE: 1
+      NEKO_NAT1TO1: 127.0.0.1

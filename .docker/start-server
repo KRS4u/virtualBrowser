@@ -35,7 +35,7 @@ docker run --rm -it \
   $GPU_FLAG \
   -p "${SERVER_PORT}:8080" \
   -p "${SERVER_EPR}:${SERVER_EPR}/udp" \
-  -e "NEKO_SCREEN=1920x1080@60" \
+  -e "NEKO_SCREEN=430x932@30" \
   -e "NEKO_EPR=${SERVER_EPR}" \
   -e "NEKO_NAT1TO1=${SERVER_IP}" \
   -e "NEKO_ICELITE=true" \

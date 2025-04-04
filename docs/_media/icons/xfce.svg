@@ -15,7 +15,7 @@
         <dc:source>http://www.xfce.org/about/artwork</dc:source>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
         <dc:description>XFCE logo
-* Based on xfce_logo.svg from http://www.xfce.org/about/artwork
+* Based on xfce_logo.png from http://www.xfce.org/about/artwork
 * Optimized colours
 * Added "X" and "XFCE" text.
 </dc:description>

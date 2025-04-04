@@ -8,7 +8,7 @@
         <div v-if="!videoOnly" class="header-container">
           <neko-header />
         </div>
-        <div class="video-container">
+        <div v-if="!disabeld || (disabeld && hosting)" class="video-container">
           <neko-video
             ref="video"
             :hideControls="hideControls"
@@ -234,6 +234,14 @@
 
     get connected() {
       return this.$accessor.connected
+    }
+
+    get disabeld() {
+      return this.$accessor.remote.hosted
+    }
+
+    get hosting() {
+      return this.$accessor.remote.hosting
     }
   }
 </script>
